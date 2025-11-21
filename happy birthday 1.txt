@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      color: #d6336c;
+      animation: fadeIn 3s ease-in-out;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+    .photo, .message {
+      max-width: 80%;
+      max-height: 70vh;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      display: none;
+      margin: 20px auto;
+      animation: zoomIn 1s ease-in-out;
+    }
+    .message {
+      font-size: 24px;
+      color: #6a0572;
+      background: rgba(255,255,255,0.7);
+      padding: 15px;
+      border-radius: 10px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes zoomIn {
+      from {transform: scale(0.5); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday, my sweet Kuchi-pu baby ❤😘<br><br>
+  My love, you are not only my girlfriend… not only my wife… you are my everything...<br><br>
+  I love you so much, my jaan… more than words, more than actions, more than anything 😘😘😘.<br><br>
+  Happy Birthday, my Khusi ji… my jaan… my baby… my princess… my wifey 💋😘😘🎂❤</h1>
+
+  <!-- Photos -->
+  <img class="photo" src="photos/photo1.jpg">
+  <img class="photo" src="photos/photo2.jpg">
+  <img class="photo" src="photos/photo3.jpg">
+  <img class="photo" src="photos/photo4.jpg">
+  <img class="photo" src="photos/photo5.jpg">
+  <img class="photo" src="photos/photo6.jpg">
+  <img class="photo" src="photos/photo7.jpg">
+  <img class="photo" src="photos/photo8.jpg">
+  <img class="photo" src="photos/photo9.jpg">
+  <img class="photo" src="photos/photo10.jpg">
+  <img class="photo" src="photos/photo11.jpg">
+  <img class="photo" src="photos/photo12.jpg">
+  <img class="photo" src="photos/photo13.jpg">
+  <img class="photo" src="photos/photo14.jpg">
+  <img class="photo" src="photos/photo15.jpg">
+
+  <!-- Romantic Messages -->
+  <div class="message">You are my sunshine ☀️</div>
+  <div class="message">Forever together 💕</div>
+  <div class="message">My heart beats for you ❤️</div>
+  <div class="message">Every moment with you is magic ✨</div>
+  <div class="message">You complete me 💞</div>
+  <div class="message">I choose you, always 💋</div>
+
+  <!-- Buttons -->
+  <button onclick="showNext()">Click for Surprise</button>
+  <button onclick="startSlideshow()">Start Slideshow</button>
+
+  <!-- Background Song -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="tere utto sab vaar diya.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.photo, .message');
+    let slideshowInterval;
+
+    function showNext() {
+      if (currentIndex < items.length) {
+        items[currentIndex].style.display = 'block';
+        currentIndex++;
+      } else {
+        alert("Hope you loved the surprise! 💕");
+      }
+    }
+
+    function startSlideshow() {
+      resetItems();
+      currentIndex = 0;
+      slideshowInterval = setInterval(() => {
+        if (currentIndex < items.length) {
+          items[currentIndex].style.display = 'block';
+          currentIndex++;
+        } else {
+          clearInterval(slideshowInterval);
+          alert("Slideshow finished, but my love never ends ❤️");
+        }
+      }, 4000); // 4 seconds per item
+    }
+
+    function resetItems() {
+      items.forEach(i => i.style.display = 'none');
+    }
+
+    // Auto stop after 1 minute
+    setTimeout(() => {
+      alert("Website time is over, but my love is forever ❤️");
+    }, 60000);
+  </script>
+</body>
+</html>
