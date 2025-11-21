@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ff4081;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+    .photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      animation: bounceIn 1.5s ease;
+    }
+    input, textarea {
+      margin: 10px;
+      padding: 10px;
+      font-size: 1em;
+      width: 80%;
+      max-width: 400px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="name">Happy Birthday, My Love! 🎂</h1>
+    <p id="wish">Wishing you a day filled with joy, laughter, and all your favorite things!</p>
+    <img id="photo" class="photo" src="https://via.placeholder.com/250" alt="Birthday Photo" />
+    <br/><br/>
+    <input type="text" placeholder="Enter Name" oninput="updateName(this.value)" />
+    <br/>
+    <textarea placeholder="Enter Birthday Wish" rows="3" oninput="updateWish(this.value)"></textarea>
+    <br/>
+    <input type="file" accept="image/*" onchange="loadPhoto(event)" />
+  </div>
+
+  <script>
+    function updateName(name) {
+      document.getElementById('name').textContent = `Happy Birthday, ${name || 'My Love'}! 🎂`;
+    }
+    function updateWish(wish) {
+      document.getElementById('wish').textContent = wish || 'Wishing you a day filled with joy, laughter, and all your favorite things!';
+    }
+    function loadPhoto(event) {
+      const reader = new FileReader();
+      reader.onload = function(){
+        document.getElementById('photo').src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ff4081;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+    .photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      animation: bounceIn 1.5s ease;
+    }
+    input, textarea {
+      margin: 10px;
+      padding: 10px;
+      font-size: 1em;
+      width: 80%;
+      max-width: 400px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="name">Happy Birthday, My Love! 🎂</h1>
+    <p id="wish">Wishing you a day filled with joy, laughter, and all your favorite things!</p>
+    <img id="photo" class="photo" src="https://via.placeholder.com/250" alt="Birthday Photo" />
+    <br/><br/>
+    <input type="text" placeholder="Enter Name" oninput="updateName(this.value)" />
+    <br/>
+    <textarea placeholder="Enter Birthday Wish" rows="3" oninput="updateWish(this.value)"></textarea>
+    <br/>
+    <input type="file" accept="image/*" onchange="loadPhoto(event)" />
+  </div>
+
+  <script>
+    function updateName(name) {
+      document.getElementById('name').textContent = `Happy Birthday, ${name || 'My Love'}! 🎂`;
+    }
+    function updateWish(wish) {
+      document.getElementById('wish').textContent = wish || 'Wishing you a day filled with joy, laughter, and all your favorite things!';
+    }
+    function loadPhoto(event) {
+      const reader = new FileReader();
+      reader.onload = function(){
+        document.getElementById('photo').src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</body>
+</html>
